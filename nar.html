@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pedido</title>
+    
+</head>
+<body>
+    <div id='conteudo'>
+    <h2>Aceita Namorar Comigo ?</h2>
+    <button id="sm" onclick="sim()">Sim</button>
+    <button id="btn" onmouseover=desvia(this)>Não</button>
+    
+</div>
+</body>
+
+<style>
+   #conteudo{
+
+left: 0;
+top: 0;
+background-color: #f56969;
+width: 100%;
+height: 100%;
+position: fixed;
+padding: 10px;
+text-align: center;
+font-size: larger;
+}
+#btn{
+    color: black;
+    background-color: rgb(255, 0, 17);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: large;
+}
+#sm{
+    background-color: red;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: large;
+    font-style: oblique;
+    
+}
+
+</style>
+
+<script >
+   function sim() {
+    alert('voçe aceitou namorar comigo !! 😛');
+
+}
+    function desvia(t){
+        var btn = t;
+        btn.style.position = 'absolute';
+        btn.style.bottom = geraPosicao(10, 90);
+        btn.style.left = geraPosicao(10, 90);
+        console.log('opa, desviei');
+}
+
+function geraPosicao(min, max) {
+  return (Math.random() * (max - min) + min) + '%';
+}
+</script>
+</html>
